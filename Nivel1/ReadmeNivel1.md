@@ -1,6 +1,11 @@
 # Descripción del Código
 
-Este código en Java implementa una solución para encontrar la combinación óptima de artículos que se pueden comprar con un cupón de descuento, sin exceder una cantidad máxima especificada. Utiliza una técnica de programación dinámica similar al problema de la mochila (knapsack problem).
+Este código en Java implementa una solución para encontrar la combinación óptima de artículos que se pueden comprar con un cupón de descuento, sin exceder una cantidad máxima especificada. Utiliza una técnica de programación dinámica similar al problema de la mochila (knapsack problem) con la variante de que se iguala el precio al "valor".
+
+![image](https://github.com/user-attachments/assets/2ddca57c-8b32-4db1-ad32-6e01ef821f59)
+
+Para más información del knapsack problem ver : 
+https://webs.um.es/mpulido/miwiki/lib/exe/fetch.php%3Fid%3Dpnl%26cache%3Dcache%26media%3Dwiki:prdt1.pdf
 
 ## Estructura del Código
 
