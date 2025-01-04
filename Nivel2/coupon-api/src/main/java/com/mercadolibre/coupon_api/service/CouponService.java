@@ -5,21 +5,21 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 import com.mercadolibre.coupon_api.exception.InsufficientFundsException;
-
+import com.mercadolibre.coupon_api.repository.CachedItemRepository;
+import com.mercadolibre.coupon_api.util.KnapsackSolver;
 import com.mercadolibre.coupon_api.model.CouponResponse;
-import com.mercadolibre.coupon_api.repository.ItemRepository;
 
 @Service
 public class CouponService {
 
-    private final ItemRepository itemRepository;
+    private final CachedItemRepository cachedItemRepository;
 
-    public CouponService(ItemRepository itemRepository) {
-        this.itemRepository = itemRepository;
+    public CouponService(CachedItemRepository cachedItemRepository) {
+        this.cachedItemRepository = cachedItemRepository;
     }
 
     public CouponResponse calculateOptimalItems(List<String> itemIds, float amount) {
-        Map<String, Float> items = itemRepository.getPrices(itemIds);
+        Map<String, Float> items = cachedItemRepository.getPrices(itemIds);
 
         // Implementación del problema de la mochila
         List<String> optimalItems = KnapsackSolver.solve(items, amount);

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  coupon-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: coupon-api:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+    depends_on:
+      - redis
+    networks:
+      - coupon-network
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - coupon-network
+
+volumes:
+  redis_data:
+
+networks:
+  coupon-network:
