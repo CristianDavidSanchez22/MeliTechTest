@@ -12,7 +12,10 @@ public class RedisConfig {
 
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory();
+        
+        String redisHost = System.getenv("SPRING_REDIS_HOST");
+        int redisPort = Integer.parseInt(System.getenv("SPRING_REDIS_PORT"));
+        return new LettuceConnectionFactory(redisHost, redisPort);
     }
 
     @Bean
@@ -21,6 +24,9 @@ public class RedisConfig {
         template.setConnectionFactory(connectionFactory);
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        LettuceConnectionFactory lettuceConnectionFactory = (LettuceConnectionFactory) connectionFactory;
+        System.out.println("Redis Connection Host: " + lettuceConnectionFactory.getHostName());
+        System.out.println("Redis Connection Port: " + lettuceConnectionFactory.getPort());
         return template;
     }
 }

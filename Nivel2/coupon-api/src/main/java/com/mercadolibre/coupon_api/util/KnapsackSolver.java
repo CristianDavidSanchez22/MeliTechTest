@@ -1,4 +1,4 @@
-package com.mercadolibre.coupon_api.service;
+package com.mercadolibre.coupon_api.util;
 
 import java.util.Map;
 import java.util.List;

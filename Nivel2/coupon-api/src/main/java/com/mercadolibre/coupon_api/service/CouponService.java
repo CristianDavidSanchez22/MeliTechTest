@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 import com.mercadolibre.coupon_api.exception.InsufficientFundsException;
 import com.mercadolibre.coupon_api.repository.CachedItemRepository;
-
+import com.mercadolibre.coupon_api.util.KnapsackSolver;
 import com.mercadolibre.coupon_api.model.CouponResponse;
 
 @Service

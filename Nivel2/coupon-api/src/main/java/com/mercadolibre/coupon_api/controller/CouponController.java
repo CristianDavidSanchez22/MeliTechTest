@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.mercadolibre.coupon_api.service.CouponService;
+import com.mercadolibre.coupon_api.model.CouponResponse;
 import java.util.ArrayList;
 import java.util.List;
 import com.mercadolibre.coupon_api.model.CouponRequest;
-import com.mercadolibre.coupon_api.model.CouponResponse;
 import com.mercadolibre.coupon_api.exception.InsufficientFundsException;
 
 @RestController
