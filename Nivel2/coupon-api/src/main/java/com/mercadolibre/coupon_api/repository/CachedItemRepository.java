@@ -23,17 +23,18 @@ public class CachedItemRepository {
         Map<String, Float> prices = new HashMap<>();
         List<String> missingItems = new ArrayList<>();
 
-        for (String itemId : itemIds) {
-            Float price = (Float) redisTemplate.opsForValue().get(itemId);
+        itemIds.stream().forEach(itemId -> {
+            Number priceNumber = (Number) redisTemplate.opsForValue().get(itemId);
+            Float price = priceNumber != null ? priceNumber.floatValue() : null;
             if (price != null) {
-                prices.put(itemId, price);
+            prices.put(itemId, price);
             } else {
-                missingItems.add(itemId);
+            missingItems.add(itemId);
             }
-        }
+        });
 
         if (!missingItems.isEmpty()) {
-            missingItems.forEach(itemId -> {
+            missingItems.stream().forEach(itemId -> {
                 Float price = itemRepository.getItem(itemId).getPrice();
                 prices.put(itemId, price);
                 redisTemplate.opsForValue().set(itemId, price, Duration.ofHours(1));

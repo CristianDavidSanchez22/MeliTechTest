@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class KnapsackSolver {
+public interface KnapsackSolver {
     public static List<String> solve(Map<String, Float> items, float amount) {
         // Implementación del problema de la mochila
         List<Map.Entry<String, Float>> itemList = new ArrayList<>(items.entrySet());

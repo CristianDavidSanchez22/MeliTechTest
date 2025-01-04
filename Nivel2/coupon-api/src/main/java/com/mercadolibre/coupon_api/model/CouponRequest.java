@@ -1,6 +1,6 @@
 package com.mercadolibre.coupon_api.model;
 
-import java.util.List;
+import java.util.Set;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CouponRequest {
-    private List<String> itemIds;
+    private Set<String> itemIds;
     private float amount;
 }
 
