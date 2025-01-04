@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mercadolibre.coupon_api.CouponApiApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-04T01:34:00" hostname="192.168.1.14" time="0.473">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.mercadolibre.coupon_api.CouponApiApplicationTests" time="0.473"/>
+  <system-out><![CDATA[20:33:59.230 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mercadolibre.coupon_api.CouponApiApplicationTests]: CouponApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:33:59.288 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mercadolibre.coupon_api.CouponApiApplication for test class com.mercadolibre.coupon_api.CouponApiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T20:33:59.604-05:00  INFO 1532 --- [coupon-api] [    Test worker] c.m.c.CouponApiApplicationTests          : Starting CouponApiApplicationTests using Java 23.0.1 with PID 1532 (started by davidsanchez in /Users/davidsanchez/Documents/Maestria/PruebaMeli/MeliTechTest/Nivel2/coupon-api)
+2025-01-03T20:33:59.605-05:00  INFO 1532 --- [coupon-api] [    Test worker] c.m.c.CouponApiApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T20:33:59.930-05:00  INFO 1532 --- [coupon-api] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44dc665b-33bf-3305-83ec-dd7cb8907d35
+2025-01-03T20:34:00.277-05:00  INFO 1532 --- [coupon-api] [    Test worker] c.m.c.CouponApiApplicationTests          : Started CouponApiApplicationTests in 0.813 seconds (process running for 1.528)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/davidsanchez/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
