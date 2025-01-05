@@ -8,7 +8,7 @@ public class Coupon {
         items.put("MLA3", 220f);
         items.put("MLA4", 80f);
         items.put("MLA5", 90f);
-        //items.put("MLA6", 10f);
+        items.put("MLA6", 10f);
         float maxAmount = 500f;
 
         Coupon main = new Coupon();
