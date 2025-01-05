@@ -24,9 +24,6 @@ public class RedisConfig {
         template.setConnectionFactory(connectionFactory);
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-        LettuceConnectionFactory lettuceConnectionFactory = (LettuceConnectionFactory) connectionFactory;
-        System.out.println("Redis Connection Host: " + lettuceConnectionFactory.getHostName());
-        System.out.println("Redis Connection Port: " + lettuceConnectionFactory.getPort());
         return template;
     }
 }
